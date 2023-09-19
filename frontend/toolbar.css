@@ -1,0 +1,100 @@
+.duration-buttons {
+    display: flex;
+}
+
+.btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.default {
+    color: white;
+    background-color: rgb(114, 114, 114);
+}
+
+.default:hover {
+    border: 2px solid rgb(52, 107, 248);
+}
+
+.disabled {
+    background-color: rgb(157, 157, 157);
+    color: rgba(255, 255, 255, 0.56);
+    cursor: not-allowed;
+}
+
+.selected {
+    border: 2px solid rgb(52, 107, 248);
+    background-color: rgb(52, 107, 248);
+    color: white;
+}
+
+.time-enter-div {
+    display: flex;
+}
+
+.time-input {
+    margin-top: 12px;
+}
+
+.enter-time-div {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-right: 12px;
+}
+.date-span {
+    display: block;
+}
+
+.enter-date-section {
+    display: flex;
+}
+
+.times-section {
+    display: flex;
+}
+
+.times-title {
+ font-size: 1.875rem;
+ font-weight: 500;
+}
+
+.times-text {
+    position: relative;
+}
+
+.times-subtext {
+    position: absolute;
+    top: 68%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.times-listed {
+    display: flex;
+    margin-left: 8px;
+    align-items: center;
+    flex-grow: 1;
+    gap: 8px;
+}
+
+.time {
+    border-radius: 500px;
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid rgb(40, 40, 40);
+    padding: 8px;
+}
+
+.submit-div {
+    margin-top: 12px;
+}
+
+.time-enter-div {
+    margin-top: 12px;
+}

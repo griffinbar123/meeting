@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Griffin's Meeting Site</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" /> 
+        <link rel="stylesheet" type="text/css" href="toolbar.css" /> 
+        <link rel="stylesheet" type="text/css" href="calendar.css" /> 
+        <script src="index.js"></script>
+    </head>
+    <body class="app">
+        <section class="toolbar content">
+            <section class="times-section">
+                <div class="times-text">
+                    <h2 class="times-title">
+                        Add your times:
+                    </h2>
+                    <span class="times-subtext">(Click to remove)</span>
+                </div>
+                <div id="time-listing" class="times-listed">
+
+                </div>
+            </section>
+            <div class="time-input">
+                <div class="date-enter-div">
+                    <label for="enter-start-date" class="enter-date-label">Select Date</label>
+                    <section class="enter-date-section">
+                        <div class="date-div">
+                            <button type="button" class="btn date-button disabled">
+                                <span class="date-span" id="sunday-date">17</span>
+                                <span id="sunday-name">SUN</span>
+                            </button>
+                        </div>
+                        <div class="date-div">
+                            <button type="button" class="btn date-button default">
+                                <span class="date-span" id="monday-date">17</span>
+                                <span class="date-span" id="monday-name">MON</span>
+                            </button>
+                        </div>
+                        <div class="date-div">
+                            <button type="button" class="btn date-button selected">
+                                <span class="date-span" id="tuesday-date">17</span>
+                                <span id="tuesday-name">TUE</span>
+                            </button>
+                        </div>
+                        <div class="date-div">
+                            <button type="button" class="btn date-button default">
+                                <span class="date-span" id="wednesday-date">17</span>
+                                <span id="wednesday-name">WED</span>
+                            </button>
+                        </div>
+                        <div class="date-div">
+                            <button type="button" class="btn date-button default">
+                                <span class="date-span" id="thursday-date">17</span>
+                                <span id="thursday-name">THU</span>
+                            </button>
+                        </div>
+                        <div class="date-div">
+                            <button type="button" class="btn date-button default" class="btn default">
+                                <span class="date-span" id="friday-date">17</span>
+                                <span id="friday-name">FRI</span>
+                            </button>
+                        </div>
+                        <div class="date-div">
+                            <button type="button" class="btn date-button default">
+                                <span class="date-span" id="saturday-date">17</span>
+                                <span id="saturday-name">SAT</span>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+                <div class="time-enter-div">
+                    <div class="enter-time-div">
+                        <label for="enter-start-time" class="enter-time-label">Enter Start Time</label>
+                        <input type="time" id="enter-start-time" class="enter-time-input"/>
+                    </div>
+                    <div class="enter-time-div">
+                        <label for="enter-end-time" class="enter-time-label">Enter End Time</label>
+                        <input type="time" id="enter-end-time" class="enter-time-input"/>
+                    </div>
+                </div>
+                <div class="submit-div">
+                    <button id="submit-button" class="btn selected">Add</button>
+                    <button id="clear-button" class="btn">Clear</button>
+                </div>
+            </div>
+        </section>
+        <section class="calendar content">
+            <h4 class="calender-day-title">Sunday</h4>
+            <div id="sunday-calendar-div" class="availabilities">
+            </div>
+            <h4 class="calender-day-title">Monday</h4>
+            <div id="monday-calendar-div" class="availabilities">
+            </div>
+            <h4 class="calender-day-title">Tuesday</h4>
+            <div id="tuesday-calendar-div" class="availabilities">
+            </div>
+            <h4 class="calender-day-title">Wednesday</h4>
+            <div id="wednesday-calendar-div" class="availabilities">
+            </div>
+            <h4 class="calender-day-title">Thursday</h4>
+            <div id="thursday-calendar-div" class="availabilities">
+            </div>
+            <h4 class="calender-day-title">Friday</h4>
+            <div id="friday-calendar-div" class="availabilities">
+            </div>
+            <h4 class="calender-day-title">Saturday</h4>
+            <div id="saturday-calendar-div" class="availabilities">
+            </div>
+        </section>
+    </body>
+</html>
