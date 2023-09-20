@@ -37,7 +37,8 @@ func (room *Room) UpdateRoomForAllActiveClients() {
 	*/
 	log.Println("Updating all active clients")
 	for _, p := range room.ActiveClients {
-		log.Println("Updating active clients: ", p.Name)
+		log.Println("Updating an active client: ", p.Name)
+		log.Println(p.Times)
 		p.SendRoomState(room)
 	}
 }

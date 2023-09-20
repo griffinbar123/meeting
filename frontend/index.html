@@ -5,10 +5,35 @@
         <link rel="stylesheet" type="text/css" href="styles.css" /> 
         <link rel="stylesheet" type="text/css" href="toolbar.css" /> 
         <link rel="stylesheet" type="text/css" href="calendar.css" /> 
+        <link rel="stylesheet" type="text/css" href="entry.css" /> 
         <script src="index.js"></script>
     </head>
     <body class="app">
+
+        <div id="entry-page" class='entry-page'>
+            <span class='entry-title'>Griffin's Meeting</span>
+            <div class='entry-div'>
+                <input id="name-input" class='entry-input'  type="text" placeholder="Enter Your Name"/>
+                <span id="name-error" class='entry-error'>* Enter Valid Name *</span>
+                <input id="room-input" class='entry-input' type="text" placeholder="Enter Room Number"/>
+                <span id="room-error" class='entry-error'>* Enter Valid Room *</span>
+                <span id="room-number-description" class='entry-room-number-description'>Share This Code With Friends!</span>
+                <span id="entry-room-number" class='entry-room-number'></span>
+                <button id="join-room-button" class='name-button'>
+                    Join Room
+                </button>
+                <button id="create-room-button" class='room-button'>
+                    Create Room
+                </button>
+            </div>
+        </div>
+
+
         <section class="toolbar content">
+            <span id="room-number"></span>
+            <div id="users" class="users-div">
+                <span class="user-span">Users:</span>
+            </div>
             <section class="times-section">
                 <div class="times-text">
                     <h2 class="times-title">
@@ -79,7 +104,7 @@
                     </div>
                 </div>
                 <div class="submit-div">
-                    <button id="submit-button" class="btn selected">Add</button>
+                    <button id="submit-button" class="btn primary">Add</button>
                     <button id="clear-button" class="btn">Clear</button>
                 </div>
             </div>

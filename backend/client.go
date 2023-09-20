@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"time"
 
 	"github.com/gorilla/websocket"
 )
@@ -106,16 +105,16 @@ func (client *ClientInRoom) AddActiveClientToRoom(room *Room) {
 	/*
 		handles adding a client to a room and making them an active client
 	*/
-	room.ActiveClients = append(room.ActiveClients, client.NewActiveClient())
+	room.ActiveClients = append(room.ActiveClients, client.NewActiveClient(room))
+	room.RoomSize += 1
 }
 
-func (client *ClientInRoom) NewActiveClient() ActiveClient {
+func (client *ClientInRoom) NewActiveClient(room *Room) ActiveClient {
 	return ActiveClient{
-		Client: client.Client,
-		Conn:   client.Conn,
-		Times: [][]time.Time{
-			{time.Now(), time.Now()},
-		},
+		Client:   client.Client,
+		Conn:     client.Conn,
+		Times:    []Time{},
+		ColorPos: room.RoomSize,
 	}
 }
 

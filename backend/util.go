@@ -13,6 +13,11 @@ func remove(s []ClientInRoom, i int) []ClientInRoom {
 	return s[:len(s)-1]
 }
 
+func removeRoom(s []Room, i int) []Room {
+	s[i] = s[len(s)-1]
+	return s[:len(s)-1]
+}
+
 func removeActiveClient(s []ActiveClient, i int) []ActiveClient {
 	s[i] = s[len(s)-1]
 	return s[:len(s)-1]

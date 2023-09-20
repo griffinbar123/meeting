@@ -1,0 +1,84 @@
+.entry-page {
+    display: flex;
+    width: 90vw;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.entry-div {
+    width: clamp(200px, 300px, 400px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(34, 34, 34);
+    opacity: 0.9;
+    padding:24px;
+    border-radius: 2%;
+}
+
+.entry-input {
+    width:97.45%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 4px;
+}
+
+.name-button {
+    margin: 16px 4px 4px 4px;
+    width:100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 26px;
+}
+
+.room-button {
+    margin: 4px;
+    width:100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 16px;
+}
+
+.entry-error {
+    display: none;
+    color: red;  
+    margin: 2px 0px 2px 0px;
+}
+
+.entry-room-number-description {
+    display: none;
+    color: rgb(255, 255, 255); 
+    font-size: 18px;
+}
+
+.entry-room-number {
+    display: none;
+    color: rgb(255, 255, 255); 
+    font-weight: 600;
+    font-size: 36px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.entry-create-room {
+    color: rgb(255, 255, 255);  
+    margin: 2px 0px 2px 0px;
+}
+
+.entry-title {
+    position: absolute;
+    font-weight: 600;
+    font-size: 86px;
+    color: white;
+    top: 15%;
+}
+
+.entry-buyin-input {
+    text-align: center;
+    padding: 12px 0px;
+    margin: 16px 0px 4px 0px;
+    width:100%;
+    font-size: 38px;
+}

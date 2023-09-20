@@ -1,3 +1,25 @@
+:root {
+    --primary-color: blue;
+    --btn-color: rgb(143, 23, 255);
+}
+
+#room-number {
+    position: absolute;
+    right: 12px;
+}
+
+.users-div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.user {
+    border: 3px solid black;
+    border-radius: 200px;
+    padding: 4px 8px;
+}
+
 .duration-buttons {
     display: flex;
 }
@@ -17,7 +39,8 @@
 }
 
 .default:hover {
-    border: 2px solid rgb(52, 107, 248);
+    border: 2px solid;
+    border-color: var(--primary-color);
 }
 
 .disabled {
@@ -27,8 +50,14 @@
 }
 
 .selected {
-    border: 2px solid rgb(52, 107, 248);
-    background-color: rgb(52, 107, 248);
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary {
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
     color: white;
 }
 

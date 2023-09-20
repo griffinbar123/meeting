@@ -54,13 +54,13 @@ func HandleMessage(ws *websocket.Conn, message []byte) {
 	log.Println("message: " + t)
 
 	switch t {
-	case "player-metadata":
+	case "active-client-metadata":
 		var client = Client{}
 		if json.Unmarshal([]byte(temp[11:len(temp)-1]), &client); err != nil {
 			log.Printf("error: %v", err)
 		}
-		if player, ok := client.CheckForClientMetadata(ws); ok {
-			player.JoinRoom()
+		if activeClient, ok := client.CheckForClientMetadata(ws); ok {
+			activeClient.JoinRoom()
 		}
 	case "join-room":
 		var client = ClientInRoom{}
@@ -83,19 +83,26 @@ func HandleMessage(ws *websocket.Conn, message []byte) {
 		if json.Unmarshal([]byte(temp[11:len(temp)-1]), &client); err != nil {
 			log.Printf("error: %v", err)
 		}
+
 		client.DisconnectClientFromTheirRoom()
 		if err := ws.Close(); err != nil {
 			log.Printf("error: %v", err)
 		}
+
 	case "room-state":
 		var activeClientRoomState = Room{}
 		if json.Unmarshal([]byte(temp[11:len(temp)-1]), &activeClientRoomState); err != nil {
 			log.Printf("error: %v", err)
 		}
 		log.Println("room-state: " + temp[11:len(temp)-1])
-		if _, room, ok := FindRoomFromId(activeClientRoomState.RoomId); ok {
-			room.UpdateRoomForAllActiveClients()
+
+		if i, _, ok := FindRoomFromId(activeClientRoomState.RoomId); ok {
+			for j, client := range activeClientRoomState.ActiveClients {
+				RoomArray[i].ActiveClients[j].Times = client.Times
+			}
+			RoomArray[i].UpdateRoomForAllActiveClients()
 		}
+
 	default:
 		log.Println("error: unknown message type")
 	}
